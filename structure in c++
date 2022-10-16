@@ -1,0 +1,64 @@
+structure in c++----------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+// structure**************************************** 
+ 
+//struct employee
+//{
+//	int id;
+//	char favcar;
+//	float salary;
+//};
+
+//typedef******************************************
+
+//typedef struct employee
+//{
+//	int id;
+//	char favcar;
+//	float salary;
+//}ep; //kind of nickname of employee
+
+//union ****************************************
+
+union money   //  in union memory is shared 
+{
+  int rice;
+  char c;
+  float dec;	
+};
+
+int main()
+{
+//	struct employee harry;
+//	harry.id = 1;
+//	harry.favcar = 'd';
+//	harry.salary = 12000;
+
+//  ep harry;
+//	harry.id = 1;
+//	harry.favcar = 'd';
+//	harry.salary = 12000;
+
+//    union money m1;
+//    m1.rice = 34;
+//    m1.c = 'r';
+//    m1.dec = 123;
+
+//enum*****************************************
+
+    enum meal{breakfast, lunch, dinner};
+    meal a = breakfast;
+    cout<<a;
+	 
+//  cout<<harry.id<<endl;
+//  cout<<harry.favcar<<endl;
+//	cout<<m1.dec<<endl;
+	
+	
+	
+	
+	return 0 ;
+}
