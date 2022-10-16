@@ -1,0 +1,46 @@
+pointer----
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a=3;
+	int* b =&a;
+	cout<<b<<endl;
+//	&----> (address of) operator
+//  *------> derefrence operator
+//  int* b-----> pointer variable which points integer which has name b
+    cout<<"the value stored at the address b is"<<*b<<endl;
+    
+//  pointer to pointer
+
+    int **c = &b ;
+//  **C---->stores the address of pointer variable *b  
+    return 0;
+}
+
+
+refrence---------
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//****reference variable****//
+	//one variable different names
+    //float x = 455;
+    //float &y = x;
+    //cout<<x<<endl;
+    //cout<<y<<endl;
+    
+    //******typecasting********//
+    //convert one data type from another data type//  
+	float b = 45.65;
+	cout<<"the value of b is"<<(int)b//int(b);
+	return 0;
+}
+
+
+
+
