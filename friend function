@@ -1,0 +1,49 @@
+FRIEND FUNCTION----------------------------------------
+
+#include<iostream>
+using namespace std;
+
+class complex
+{
+	int a;
+	int b;
+	
+	public:
+	void setData(int v1, int v2)
+	{
+	  a = v1;
+	  b = v2;	
+    }
+    
+    friend complex sumComplex(complex o1, complex o2);  //by using friend sumcomplex can acess the private data of class 
+                                                        //because the class complex allows the function sumcomplex
+                                                        //it  is just only declaration it is not the part of class
+    void printNumber()
+	{
+		cout<<"your complex number is "<<a<<" + "<<b<<"i"<<endl;
+	}
+};
+
+
+complex sumComplex(complex o1, complex o2)  //new function which return sum of complex
+{                                            //sumcomplex cant directly acess the private data 
+	complex o3; //new object
+	o3.setData((o1.a + o2.a),(o1.b+ o2.b));
+	return o3;
+}
+int main()
+{
+	complex c1, c2, sum;
+	c1.setData(2,3);
+	c1.printNumber();
+	
+	c2.setData(5,6);
+	c2.printNumber();
+	
+	sum = sumComplex(c1, c2);
+	sum.printNumber();
+	
+	//c1.sumComplex(); this is invalid you cant call it from class complex object 
+	
+	return 0 ;
+}
