@@ -1,0 +1,44 @@
+function in c++---------------------------------
+
+#include<iostream>
+using namespace std;
+
+
+//int sum(int a, int b, int c)
+//{
+//	int z = a+b+c;
+//	return z;
+//}
+
+//function prototype**********************************
+
+int sum(int a, int b, int c); // it tells that yoy will find the function sum() later 
+void g(); // no value taken no value return
+
+int main()
+{
+	int num1, num2, num3;
+	cout<<"enter the num1: "<<endl;
+	cin>>num1;
+	cout<<"enter the num2"<<endl;
+	cin>>num2;
+	cout<<"enter the num3"<<endl;
+	cin>>num3;
+	//num1 num2 num 3 are actual parameter
+	cout<<"the sum is "<<sum(num1, num2, num3)<<endl;
+	g();
+	return 0;  // this shows to the os that program is executed successfully
+}
+ 
+ 
+//function prototype me aise likhte haii 
+int sum(int a, int b, int c)  //a,b and c are formal parameter and its takes the value from actual parameter
+{
+	int z = a+b+c;
+	return z;
+}
+
+void g()
+{
+	cout<<"hello!! Good Morning";
+}
