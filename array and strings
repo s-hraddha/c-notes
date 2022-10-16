@@ -1,0 +1,77 @@
+arrays---------------------------------------------------------------------
+#include<iostream>
+using namespace std;
+
+int main(){
+	
+	int marks[]= {23,45,67,89};
+	int newmarks[]={19,87,65,43,32,21};
+//	marks[2]=100;    // to change the value of an array
+//	cout<<marks[0]<<endl;
+//	cout<<marks[1]<<endl;
+//	cout<<marks[2]<<endl;
+//	cout<<marks[3]<<endl;
+
+    for (int i =0; i<4; i++)
+    {
+    	cout<<"the marks are:"<<marks[i]<<endl;
+	}
+	for(int j = 0; j<6; j++)
+	{
+		cout<<"the new marks are: "<<newmarks[j]<<endl;
+	}
+	
+	//pointers and arrays******************************
+	
+	int*p = marks;
+	cout<<*(p++)<<endl;  //the value of p is print then p will be increment
+	cout<<*p<<endl;  // incremented value will be printed
+	cout<<*(++p)<<endl;  //  // increment hoga phir value dega
+	cout<<"the value  is:"<<*p<<endl;
+	cout<<"the value  is:"<<*(p+1)<<endl; 
+	cout<<"the value is:"<<*(p+2)<<endl; 
+	cout<<"the value is:"<<*(p+3)<<endl;  
+	return 0;
+  
+  strings----------------------------------------------------------
+  
+  #include<iostream>
+using namespace std;
+
+/*struct account{
+	 int id;
+	 string name;
+	 float amount;
+};
+int main(){
+
+    struct account saving;
+	saving.amount = 120000;
+	saving.id =12;
+	saving.name = "shivi"; 
+	cout<<saving.amount<<endl;
+	cout<<saving.id<<endl;
+	cout<<saving.name;
+	return 0;
+}*/
+//    dono same hai------------>
+
+	typedef struct account{
+	 int id;
+	 string name;
+	 float amount;
+} acc;
+int main(){
+
+    acc saving;
+	saving.amount = 120000;
+	saving.id =12;
+	saving.name = "shivi"; 
+	cout<<saving.amount<<endl;
+	cout<<saving.id<<endl;
+	cout<<saving.name;
+	return 0;
+}
+  
+	
+}
