@@ -1,0 +1,65 @@
+operators---
+#include<iostream> // header file 
+using namespace std;
+int main ()
+{
+//	int a =4; int b=5;
+//	cout<<"hello world!!\n the value of a is: "<<a;
+//	cout<<"\n the value of b is: "<<b;
+//	return 0;
+
+// learn iostream****************
+   /* int num1 , num2;
+    cout<<"enter the value of num1:\n"; //insertion operator
+    cin>>num1;
+    cout<<"enter the value of num2:";
+    cin>>num2;  //extraction operator
+    
+    cout<<"the sum is "<<num1+num2;*/
+    
+// operator in c++******************************
+
+    int a=4, b=5;
+	cout<<"the value of a++: "<<a++<<endl;
+	cout<<" the value of ++a: "<<++a<<endl;
+	cout<<" the value of a--: "<<a--<<endl;
+	cout<<"the value of --a: "<<--a<<endl;    
+    return 0;
+
+
+}
+
+manipulators-----
+#include<iostream>
+#include<iomanip>
+using namespace std;
+ 
+int c = 45; 
+ 
+int main()
+{
+//  int a, b, c;
+//  cout<<"enter the value of a: "<<endl;
+//  cin>>a;
+//  cout<<"enter the value of b: "<<endl;
+//  cin>>b;
+//  
+//  c= a + b;
+//  cout<<"sum: "<<c<<endl; 
+//  cout<<"the global value of c: "<<::c;
+//  return 0;
+
+
+//manipulators in c++
+int a = 3, b = 78, c= 12333;
+cout<<"the value of a is : "<<setw(4)<<a<<endl;
+cout<<"the value of b is : "<<setw(4)<<b<<endl;
+cout<<"the value of c is : "<<setw(4)<<c<<endl;
+
+//without setw()
+
+cout<<"the value of a is : "<<a<<endl;
+cout<<"the value of b is : "<<b<<endl;
+cout<<"the value of c is : "<<c<<endl;
+return 0;
+}
