@@ -1,0 +1,50 @@
+call by value or call by refrence------------------------------
+
+#include<iostream>
+using namespace std;
+
+
+int sum(int a, int b)
+{
+	int z = a+b;
+	return z;
+}
+
+//this will not swap the value 
+int swap(int a, int b ) // formal parameter
+{
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
+//call by refrence using pointer**********************
+
+void swappointer(int* a, int* b )
+{
+	int temp = *a;  //*a ----> means value at a
+	*a = *b;
+	*b = temp;
+}
+
+// call by refrence using c++ refrence variable**************
+void swaprefrencevar(int &a, int &b )
+{
+	int temp = a;  //*a ----> means value at a
+	a = b;
+	b = temp;
+}
+
+
+int main()
+{
+	int x = 4, y = 5; //actual parameter
+    //cout<<"the sum is :"<<sum(4,5);
+	cout<<"enter x"<<x<<"enter y:"<<y<<endl;
+	//swap(x,y); // this will not swap because the value of x and y is copied in a and b
+	            //  and to change the value of a and b(jo value copy hui hai ) doesnot effect the value of x or y
+	//swappointer(&x, &y); //using pointer
+	swaprefrencevar(x,y);  //using refrence
+	cout<<"enter x"<<x<<"enter y:"<<y<<endl;
+	return 0 ;
+}
